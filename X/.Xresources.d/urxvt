@@ -1,0 +1,38 @@
+! URxvt
+  URxvt*depth: 32
+  URxvt*fading: 20
+  URxvt*font: xft:Inconsolata:size=9, xft:Inconsolata for Powerline
+  URxvt*letterSpace: -1
+  URxvt*foreground: #88aabb
+  URxvt*background: #223344
+! perl extensions
+  URxvt.perl-ext-common: tabbedex,resize-font
+! clipboard
+  URxvt*iso14755: False
+  URxvt.keysym.Control-Shift-C: perl:clipboard:copy
+  URxvt.keysym.Control-Shift-V: perl:clipboard:paste
+! tabbedex
+  URxvt.tabbed.reopen-on-close: yes
+  URxvt.tabbed.tabbar-fg: 3
+  URxvt.tabbed.tabbar-bg: 2
+  URxvt.tabbed.tab-fg: 6
+  URxvt.tabbed.tab-bg: 4
+  URxvt.keysym.C-t: perl:tabbedex:new_tab
+  URxvt.keysym.C-Tab: perl:tabbedex:next_tab
+! resize-font
+! colorscheme
+  URxvt.color0: #335599
+  URxvt.color1: #5566AA
+  URxvt.color2: #334477
+  URxvt.color3: #AA5566
+  URxvt.color4: #CCDDFF
+  URxvt.color5: #706099
+  URxvt.color6: #EA8596
+! scroll
+  URxvt*scrollstyle: plain
+  URxvt*scrollcolor: #aabbcc
+  URxvt*skipscroll: on
+  URxvt*thickness: 6    
+  URxvt*visualbell: on
+  URxvt*cursorblink: on
+  URxvt*savelines: 500
