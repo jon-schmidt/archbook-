@@ -1,0 +1,5 @@
+[user]
+	name = Jon Schmidt
+	email = info.humanz@gmail.com
+[core]
+	editor = nvim

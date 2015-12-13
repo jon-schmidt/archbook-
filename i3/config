@@ -1,0 +1,198 @@
+# /home/users/jschmidt/.confi/i3/config
+# i3# :::
+  set $MOD              Mod4
+  set $MODS             Mod4+Shift
+  set $MODR             --release Mod4
+  set $MODW             --whole-window Mod4
+  set $MODWS            --whole-window Mod4+Shift
+  set $MODWR            --release --whole-window Mod4
+
+  set $Exec             exec --no-startup-id
+  set $Exec_ID          exec
+  set $I3_msg           exec --no-startup-id i3-msg
+
+  set $temp_dir         ~/Temp
+  set $i3_Quit_message  "i3-nagbar -t warning -m 'EXIT i3?' -b 'End Session' 'i3-msg exit'"
+
+	font pango: Inconsolata 9
+
+  bindsym $MODS+Escape    restart
+  bindsym $MODS+r         reload
+  bindsym $MODS+q         exit
+  bindsym $MOD+b          bar mode toggle bar-2
+# ;;;
+# colors# :::
+  client.focused          #FFFFFF #EFEFFF #BFCFFF #000000
+  client.focused_inactive #99A8FF #A9CAFF #EFCFFF #000000
+  client.unfocused        #8998FF #A9CAFF #EFCFFF #000000
+  #client.urgent
+  #client.placeholder
+  client.background       #FFFFFF
+# ;;;
+# workspaces# :::
+  set $ws_1 workspace 1
+  set $ws_2 workspace 2
+  set $ws_3 workspace 3
+  set $ws_4 workspace 4
+  set $ws_5 workspace 5
+
+	mouse_warping                   none
+	workspace_layout                stacking
+  workspace_auto_back_and_forth   yes
+
+  bindsym $MOD+1    $ws_1
+  bindsym $MOD+2    $ws_2
+  bindsym $MOD+3    $ws_3
+  bindsym $MOD+4    $ws_4
+  bindsym $MOD+5    $ws_5
+  bindsym $MOD+Tab  workspace next
+  bindsym $MODS+Tab workspace prev
+# ;;;
+# windows# :::
+  set $win_Shift    move container to
+
+  default_orientation         horizontal  
+	floating_minimum_size       60 x 50
+	floating_maximum_size       1200 x 900
+  floating_modifier           $MOD
+	focus_follows_mouse         no
+  force_display_urgency_hint  500 ms
+	hide_edge_borders           both
+	new_window                  pixel 0
+	new_float                   pixel 0
+	popup_during_fullscreen     smart
+
+  #assign [class='transmission-gtk']
+  for_window [instance='transmission-gtk'] floating enable
+  for_window [instance='transmission-gtk'] floating_maximum_size 60 x 100
+  #no_focus [window_role='pop-up']
+
+  bindsym $MOD+f          fullscreen toggle
+  bindsym $MODS+f         floating toggle
+  bindsym $MODWS+button3  floating toggle
+  bindsym $MOD+q          kill
+  bindsym $MOD+r          border normal 0
+  bindsym $MODR+r         border none
+  
+  bindsym $MOD+h          focus left
+  bindsym $MOD+j          focus down
+  bindsym $MOD+k          focus up
+  bindsym $MOD+l          focus right
+  bindsym $MOD+grave      focus right
+  bindsym $MOD+Escape     focus mode_toggle
+
+  bindsym $MODS+s         layout stacking
+  bindsym $MODS+t         layout tabbed
+
+  bindsym $MODS+h         move left 20px
+  bindsym $MODS+j         move down 20px
+  bindsym $MODS+k         move up 20px
+  bindsym $MODS+l         move right 20px
+
+  bindsym $MODS+1         $win_Shift $ws_1
+  bindsym $MODS+2         $win_Shift $ws_2
+  bindsym $MODS+3         $win_Shift $ws_3
+  bindsym $MODS+4         $win_Shift $ws_4
+  bindsym $MODS+5         $win_Shift $ws_5
+
+  bindsym $MOD+m          move scratchpad
+  bindsym $MODS+m         scratchpad show
+  bindsym $MODW+button4   $I3_msg 'scratchpad show'
+  bindsym $MODW+button5   $I3_msg 'scratchpad show'
+# ;;;
+# apps# :::
+  set $menu_set_full      -i -name 'main menu'
+  set $menu_set_quick     -i -name 'quick menu'
+  set $menu_theme         -x 360 -y 360 -w 560 -h 80 -o 0.8 -dim 0.2 -dc '#050921' -fn 'Lekton Mono-10'  -nf '#D49' -nb '#EEE' -sf '#FFF' -sb '#E67'
+  set $term_theme         -b 0 -w 0
+
+  set $app_web            google-chrome-stable
+  set $app_file           urxvt -e 'ranger'
+  set $app_menu           dmenu_run
+  set $app_term           urxvt
+
+  set $app_chromium       chromium
+  set $app_vivaldi        vivaldi
+
+  bindsym $MOD+space      $Exec     $app_menu   $menu_set_quick   $menu_theme
+  bindsym $mod+t          $Exec     $app_term
+  bindsym $mod+g          $Exec     $app_web
+  bindsym $mod+n          $Exec     $app_file
+# ;;;
+# modes # :::
+  set $mode_browser       choose your browser: [space] google chrome stable | [c] google chromium | [v] vivaldi | [esc/enter] cancel
+  set $mode_config        choose config to edit: [z] zsh [v] (n)vim [i] i3 [t] tmux [x] x
+
+
+  mode "$mode_browser" {
+    bindsym v             $Exec   $app_vivaldi
+    bindsym shift+v       $Exec   $app_vivaldi
+  }
+  #bindsym $modc+return
+  #bindsym $mods+b        mode        "$mode_browser"
+# ;;;
+# bars# :::
+set $bar_font   inconsolata 8
+set $bar1_status i3status
+set $bar2_status none
+
+bar {
+  id                        bar-1
+  position                  top
+  mode                      hide
+  hidden_state              hide
+  status_command            $bar1_status
+  #i3bar_command            <command>
+  binding_mode_indicator    no
+  separator_symbol          |
+  strip_workspace_numbers   yes
+  tray_output               none
+  tray_padding              0
+  workspace_buttons         yes
+  font                      pango: $bar_font
+  colors {
+      background            #9FAAEF
+      statusline            #DCDFFF
+      separator             #DDA4C9
+      focused_workspace     #7F8AEE #9FAAEF #DCDFFF
+      active_workspace      #7F8AEE #7F8AEE #DCDFFF
+      inactive_workspace    #4F7AAE #5F8ABE #BCBFDF
+      urgent_workspace      #4F7AAE #5F8ABE #DD4499
+     #binding_mode          #fdedbd #dddddd #ff3344
+  }
+
+}
+bar {
+  id                        bar-2
+  position                  top
+  mode                      dock
+  hidden_state              hide
+  #status_command            $bar1_status
+  #i3bar_command            <command>
+  binding_mode_indicator    no
+  separator_symbol          |
+  strip_workspace_numbers   yes
+  tray_output               primary
+  tray_padding              0
+  workspace_buttons         yes
+  font                      pango: $bar_font
+  colors {
+      background            #7F8ADF
+      statusline            #DD4499
+      separator             #DD4499
+      focused_workspace     #7F8AEE #9FAAEF #DCDFFF
+      active_workspace      #7F8AEE #7F8AEE #DCDFFF
+      inactive_workspace    #4F7AAE #5F8ABE #BCBFDF
+      urgent_workspace      #4F7AAE #5F8ABE #DD4499
+      #binding_mode         <border> <background> <text>
+  }
+
+  #bindsym
+}
+# ;;;
+# start# :::
+  $Exec compton --config ~/.config/compton.conf -D 10 -b -e 0.9 -f -i 0.7
+  $Exec redshift-gtk
+  $Exec volumeicon
+  $Exec pommed
+# ;;;
