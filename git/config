@@ -3,3 +3,5 @@
 	email = info.humanz@gmail.com
 [core]
 	editor = nvim
+[push]
+	default = simple
