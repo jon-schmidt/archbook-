@@ -1,7 +1,7 @@
 ! URxvt
   URxvt*depth: 32
   URxvt*fading: 20
-  URxvt*font: xft:Inconsolata:size=9, xft:Inconsolata for Powerline
+  URxvt*font: xft:Inconsolata:size=9, xft:Inconsolata for Powerline, xft:Powerline Symbols
   URxvt*letterSpace: -1
   URxvt*foreground: #88aabb
   URxvt*background: #223344

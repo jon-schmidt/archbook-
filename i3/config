@@ -1,5 +1,5 @@
 # /home/users/jschmidt/.confi/i3/config
-# i3# :::
+# i3
   set $MOD              Mod4
   set $MODS             Mod4+Shift
   set $MODR             --release Mod4
@@ -20,16 +20,16 @@
   bindsym $MODS+r         reload
   bindsym $MODS+q         exit
   bindsym $MOD+b          bar mode toggle bar-2
-# ;;;
-# colors# :::
-  client.focused          #FFFFFF #EFEFFF #BFCFFF #000000
+
+# colors
+  client.focused          #FFFFFF #EFEFFF #8A9BCF #000000
   client.focused_inactive #99A8FF #A9CAFF #EFCFFF #000000
   client.unfocused        #8998FF #A9CAFF #EFCFFF #000000
   #client.urgent
   #client.placeholder
   client.background       #FFFFFF
-# ;;;
-# workspaces# :::
+
+# workspaces
   set $ws_1 workspace 1
   set $ws_2 workspace 2
   set $ws_3 workspace 3
@@ -47,8 +47,8 @@
   bindsym $MOD+5    $ws_5
   bindsym $MOD+Tab  workspace next
   bindsym $MODS+Tab workspace prev
-# ;;;
-# windows# :::
+
+# windows
   set $win_Shift    move container to
 
   default_orientation         horizontal  
@@ -99,8 +99,8 @@
   bindsym $MODS+m         scratchpad show
   bindsym $MODW+button4   $I3_msg 'scratchpad show'
   bindsym $MODW+button5   $I3_msg 'scratchpad show'
-# ;;;
-# apps# :::
+
+# apps
   set $menu_set_full      -i -name 'main menu'
   set $menu_set_quick     -i -name 'quick menu'
   set $menu_theme         -x 360 -y 360 -w 560 -h 80 -o 0.8 -dim 0.2 -dc '#050921' -fn 'Lekton Mono-10'  -nf '#D49' -nb '#EEE' -sf '#FFF' -sb '#E67'
@@ -118,11 +118,10 @@
   bindsym $mod+t          $Exec     $app_term
   bindsym $mod+g          $Exec     $app_web
   bindsym $mod+n          $Exec     $app_file
-# ;;;
-# modes # :::
+
+# modes
   set $mode_browser       choose your browser: [space] google chrome stable | [c] google chromium | [v] vivaldi | [esc/enter] cancel
   set $mode_config        choose config to edit: [z] zsh [v] (n)vim [i] i3 [t] tmux [x] x
-
 
   mode "$mode_browser" {
     bindsym v             $Exec   $app_vivaldi
@@ -130,8 +129,8 @@
   }
   #bindsym $modc+return
   #bindsym $mods+b        mode        "$mode_browser"
-# ;;;
-# bars# :::
+
+# bars
 set $bar_font   inconsolata 8
 set $bar1_status i3status
 set $bar2_status none
@@ -189,10 +188,8 @@ bar {
 
   #bindsym
 }
-# ;;;
-# start# :::
+
+# start
   $Exec compton --config ~/.config/compton.conf -D 10 -b -e 0.9 -f -i 0.7
   $Exec redshift-gtk
   $Exec volumeicon
-  $Exec pommed
-# ;;;
