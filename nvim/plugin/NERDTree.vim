@@ -12,17 +12,17 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 "let g:NERDTreeDirArrowExpandable="+"
 "let g:NERDTreeDirArrowCollapsible="-"
-let g:NERDTreeIndicatorMapCustom = {
-  \ 'Modified'  : "M",
-  \ 'Staged'    : "+",
-  \ 'Untracked' : "*",
-  \ 'Renamed'   : "R",
-  \ 'Unmerged'  : "=",
-  \ 'Deleted'   : "X",
-  \ 'Dirty'     : "D",
-  \ 'Clean'     : "C",
-  \ 'Unknown'   : "?",
-  \ }
+"let g:NERDTreeIndicatorMapCustom = {
+  "\ 'Modified'  : 'M',
+  "\ 'Staged'    : '+',
+  "\ 'Untracked' : '*',
+  "\ 'Renamed'   : 'R',
+  "\ 'Unmerged'  : '=',
+  "\ 'Deleted'   : 'X',
+  "\ 'Dirty'     : 'D',
+  "\ 'Clean'     : 'C',
+  "\ 'Unknown'   : '?',
+  "\ }
 
 
 " maps
