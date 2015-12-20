@@ -1,123 +1,107 @@
 " ~/.config/nvim/init.d/maps.vim
 
-" 1 important
-  let mapleader  = "\<space>"
-  noremap <leader>t :TagbarToggle<cr>
+let mapleader  = "\<space>"
 
-" 2 moving around, searching and patterns
-  " normal
-    nnoremap <cr> G
-    nnoremap H 0
-    nnoremap J 5j
-    nnoremap K 5k
-    nnoremap L $
+" moving around, searching and patterns
+nnoremap <cr> G
+nnoremap H 0
+nnoremap J 5j
+nnoremap K 5k
+nnoremap L $
 
-" 3 tags
+" tags
 
-" 4 displaying text
-  noremap <s-h> 0
-  noremap <s-j> 5j
-  noremap <s-k> 5k
-  noremap <s-l> $
-  
-  " normal
-    nnoremap <silent><leader>N :setlocal number!<cr>
-  " insert
-    inoremap <c-h> <left>
-    inoremap <c-j> <down>
-    inoremap <c-k> <up>
-    inoremap <c-l> <right>
+" displaying text
+noremap <s-h> 0
+noremap <s-j> 5j
+noremap <s-k> 5k
+noremap <s-l> $
 
-" 5 syntax, highlighting and spelling
+nnoremap <silent><leader>N :setlocal number!<cr>
 
-" 6 multiple windows
-  " normal
-    nnoremap <leader>f <c-w>=
-    nnoremap <leader>F <c-w>\|
+inoremap <c-h> <left>
+inoremap <c-j> <down>
+inoremap <c-k> <up>
+inoremap <c-l> <right>
 
-" 7 multiple tab pages
+" syntax, highlighting and spelling
 
-" 8 terminal
+" multiple windows
+nnoremap <leader>f <c-w>=
+nnoremap <leader>F <c-w>\|
 
-" 9 using the mouse
+" multiple tab pages
 
-" 10 printing
+" terminal
 
-" 11 messages and info
+" using the mouse
 
-" 12 selecting text
-  " visual
-    vnoremap v <Plug>(expand_region_expand)
-    vnoremap V <Plug>(expand_region_shrink)
+" printing
 
-" 13 editing text
-  " normal
-    nnoremap ' viw<esc>a'<esc>hbi'<esc>lel
-    nnoremap " viw<esc>a"<esc>hbi"<esc>lel
-    nnoremap < viw<esc>a><esc>hbi<<esc>lel
-    nnoremap <leader>j <s-j>
-  " insert
-    inoremap <tab> <tab>
-  " visual
-    vnoremap ' iw<esc>a'<esc>hbi'<esc>lel
-    vnoremap " iw<esc>a"<esc>hbi"<esc>lel
-    vnoremap < iw<esc>a><esc>hbi<<esc>lel
-  " operator
-    onoremap ( i(
-    onoremap ' i'
-    onoremap " i"
-    onoremap < i<
-    onoremap [ i[
-    onoremap { i{
-    onoremap p( :<c-u>normal! F(vi(<cr>
-    onoremap p' :<c-u>normal! F'vi'<cr>
-    onoremap p" :<c-u>normal! F"vi"<cr>
-    onoremap p< :<c-u>normal! F<vi<<cr>
-    onoremap p[ :<c-u>normal! F[vi<<cr>
-    onoremap p{ :<c-u>normal! F{vi{<cr>
-    onoremap n( :<c-u>normal! f(vi(<cr>
-    onoremap n' :<c-u>normal! f'vi'<cr>
-    onoremap n" :<c-u>normal! f"vi"<cr>
-    onoremap n< :<c-u>normal! f<vi<<cr>
-    onoremap n[ :<c-u>normal! f[vi<<cr>
-    onoremap n{ :<c-u>normal! f{vi{<cr>
+" messages and info
 
-" 14 tabs and indenting
-  noremap <tab> >><esc>
-  noremap <s-tab> <<<esc>
+" selecting text
 
-" 15 folding
-  " normal
-    nnoremap <leader><leader> zc
+" editing text
+nnoremap ' viw<esc>a'<esc>hbi'<esc>lel
+nnoremap " viw<esc>a"<esc>hbi"<esc>lel
+nnoremap < viw<esc>a><esc>hbi<<esc>lel
+nnoremap <leader>j <s-j>
 
-" 16 diff mode
-  " normal
-    nnoremap <silent><leader>d :setlocal diff!<cr>
+inoremap <tab> <tab>
 
-" 17 mapping
+vnoremap ' iw<esc>a'<esc>hbi'<esc>lel
+vnoremap " iw<esc>a"<esc>hbi"<esc>lel
+vnoremap < iw<esc>a><esc>hbi<<esc>lel
 
-" 18 reading and writing files
-  " normal
-    nnoremap <s-t><s-e> :tabe
-    nnoremap <silent><leader>e :e<cr>
-    nnoremap <silent><leader>w :w<cr>
-    nnoremap <silent><leader>ve :vsplit $MYVIMRC<cr>
-    nnoremap <leader>ww :w !sudo tee %
+onoremap ( i(
+onoremap ' i'
+onoremap " i"
+onoremap < i<
+onoremap [ i[
+onoremap { i{
+onoremap p( :<c-u>normal! F(vi(<cr>
+onoremap p' :<c-u>normal! F'vi'<cr>
+onoremap p" :<c-u>normal! F"vi"<cr>
+onoremap p< :<c-u>normal! F<vi<<cr>
+onoremap p[ :<c-u>normal! F[vi<<cr>
+onoremap p{ :<c-u>normal! F{vi{<cr>
+onoremap n( :<c-u>normal! f(vi(<cr>
+onoremap n' :<c-u>normal! f'vi'<cr>
+onoremap n" :<c-u>normal! f"vi"<cr>
+onoremap n< :<c-u>normal! f<vi<<cr>
+onoremap n[ :<c-u>normal! f[vi<<cr>
+onoremap n{ :<c-u>normal! f{vi{<cr>
 
-" 19 the swap file
+" tabs and indenting
+noremap <tab> >><esc>
+noremap <s-tab> <<<esc>
 
-" 20 command line editing
+" folding
+nnoremap <leader><leader> zc
 
-" 21 executing external commands
+" diff mode
+nnoremap <silent><leader>d :setlocal diff!<cr>
 
-" 22 running make and jumping to errors
+" mapping
 
-" 23 language specific
+" reading and writing files
+nnoremap <s-t><s-e> :tabe
+nnoremap <silent><leader>e :e<cr>
+nnoremap <silent><leader>w :w<cr>
+nnoremap <silent><leader>ve :vsplit $MYVIMRC<cr>
+nnoremap <leader>ww :w !sudo tee %
 
-" 24 multi-byte characters
+" the swap file
 
-" 25 various
-  " normal
-  nnoremap <silent><leader>n :NERDTreeToggle<cr>
-  nnoremap <silent><leader>S :Scratch<cr>
+" command line editing
 
+" executing external commands
+
+" running make and jumping to errors
+
+" language specific
+
+" multi-byte characters
+
+" various
