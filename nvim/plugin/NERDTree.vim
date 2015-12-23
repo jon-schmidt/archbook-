@@ -10,23 +10,9 @@ let g:NERDTreeMouseMode = 2
 let g:NERDTreeShowBookmarks = 0
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
-"let g:NERDTreeDirArrowExpandable="+"
-"let g:NERDTreeDirArrowCollapsible="-"
-"let g:NERDTreeIndicatorMapCustom = {
-  "\ 'Modified'  : 'M',
-  "\ 'Staged'    : '+',
-  "\ 'Untracked' : '*',
-  "\ 'Renamed'   : 'R',
-  "\ 'Unmerged'  : '=',
-  "\ 'Deleted'   : 'X',
-  "\ 'Dirty'     : 'D',
-  "\ 'Clean'     : 'C',
-  "\ 'Unknown'   : '?',
-  "\ }
-
 
 " maps
-nnoremap <silent><leader>n :NERDTreeToggle<cr>
+nnoremap <silent><leader>n :silent! NERDTreeToggle<cr>
 
 " highlighting
 function! NERDTreeSetHighlighting()

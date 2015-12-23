@@ -114,7 +114,7 @@ set autoread
 
 " the swap file
 set directory=~/.nvim/swaps
-set updatetime=10000
+set updatetime=250
 
 " command line editing
 set history=100

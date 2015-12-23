@@ -193,3 +193,4 @@ bar {
   $Exec compton --config ~/.config/compton.conf -D 10 -b -e 0.9 -f -i 0.7
   $Exec redshift-gtk
   $Exec volumeicon
+  $Exec powerline-daemon -q

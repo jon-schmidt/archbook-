@@ -48,7 +48,7 @@ nnoremap " viw<esc>a"<esc>hbi"<esc>lel
 nnoremap < viw<esc>a><esc>hbi<<esc>lel
 nnoremap <leader>j <s-j>
 
-inoremap <tab> <tab>
+"inoremap <tab> <tab>
 
 vnoremap ' iw<esc>a'<esc>hbi'<esc>lel
 vnoremap " iw<esc>a"<esc>hbi"<esc>lel

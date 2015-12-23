@@ -2,65 +2,52 @@
 
 source ~/.nvim/plugins/plug.vim
 
-function! SetPlugs(plugin_list) 
-
-  " begin plug
-  call plug#begin('~/.nvim/plugins')
-
-    function! StartPlug(plugin,...)
-      if len(a:000) > 0
-        Plug a:plugin, a:000[0]
-      else
-        Plug a:plugin
-      endif
-    endfunction
-
-    for p in a:plugin_list
-      if len(p[0]) > 1
-        exec StartPlug(p[0], p[1])
-      else
-        exec StartPlug(p)
-      endif
-      unlet p
-    endfor
-
-  " end plug
-  call plug#end()
-
-endfunction
-
-" default plugins
-  let plugin_list = [] 
+call plug#begin('~/.nvim/plugins')
 
   " moving around, searching and patterns
-  let plugin_list += [ 'rking/ag.vim', 'Shougo/unite.vim', 'kien/ctrlp.vim', ]
+  Plug 'ervandew/supertab'
+  Plug 'kien/ctrlp.vim'
+
   " tags
-  let plugin_list += [ 'majutsushi/tagbar', ] 
+  Plug 'majutsushi/tagbar'
+
   " displaying text
 
   " syntax, highlighting and spelling
-  let plugin_list += [ 'scrooloose/syntastic', ['Valloric/YouCompleteMe', { 'do': 'python2 ./install.py' }], ] 
+  Plug 'scrooloose/syntastic'
+
+    " completion
+    Plug 'Valloric/YouCompleteMe', { 'do': 'python2 ./install.py' }
+    Plug 'Shougo/deoplete.nvim'
 
   " multiple windows
-  let plugin_list += [ 'easymotion/vim-easymotion', ]
+  Plug 'easymotion/vim-easymotion', 
 
   " multiple tab pages
 
   " terminal
-  let plugin_list += [ 'edkolev/promptline.vim', ]
+  "Plug 'kassio/neoterm'
 
   " using the mouse
 
   " printing
 
   " messages and info
-  let plugin_list += [ 'bling/vim-airline', ]
+  Plug 'bling/vim-airline'
 
   " selecting text
-  let plugin_list += [ 'terryma/vim-expand-region', ]
+  Plug 'terryma/vim-expand-region'
 
   " editing text
-  let plugin_list += [ 'scrooloose/nerdcommenter', 'terryma/vim-multiple-cursors', 'tpope/vim-surround', ]
+  Plug 'chrisbra/NrrwRgn'
+  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'terryma/vim-multiple-cursors' 
+  Plug 'tpope/vim-surround'
+
+    " snippets
+    Plug 'honza/vim-snippets'
+    Plug 'sirver/ultisnips'
 
   " tabs and indenting
 
@@ -75,35 +62,62 @@ endfunction
   " the swap file
 
   " command line editing
-  let plugin_list += [ 'tpope/vim-fugitive', ] 
 
   " executing external commands
 
   " running make and jumping to errors
 
+
   " language specific
+
+    " html/css
+    Plug 'othree/html5.vim', { 'for' : [ 'html', 'css' ] }
+    Plug 'mattn/emmet-vim', { 'for' : [ 'html', 'css' ] }
+
+    " javascript
+    Plug 'pangloss/vim-javascript', { 'for' : 'javascript' }
+    Plug 'walm/jshint.vim', { 'for' : 'javascript' }
+    Plug 'ternjs/tern_for_vim', { 'for' : 'javascript' }
+
+    " coffeescript 
+    Plug 'kchmck/vim-coffee-script', { 'for' : 'coffee' }
+
+    " markdown
+    Plug 'tpope/vim-markdown', { 'for' : 'markdown' }
 
   " multi-byte characters
 
   " various
-  let plugin_list += [ 'farseer90718/vim-taskwarrior', 'mtth/scratch.vim', 'scrooloose/nerdtree', 'Xuyuanp/nerdtree-git-plugin', ]
 
-" tmux plugins
-let plugin_list += [ 'christoomey/vim-tmux-navigator', ]
+    " file browsing and searching
+    Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
+    Plug 'junegunn/fzf.vim'
+    Plug 'rking/ag.vim'
+    Plug 'scrooloose/nerdtree'
+    Plug 'Shougo/unite.vim'
 
-" coffeescript plugins
-let plugin_list += [ ['kchmck/vim-coffee-script', { 'for' : 'coffee' }], ]
+    " tmux
+    if exists('$TMUX_PANE')
+      Plug 'christoomey/vim-tmux-navigator'
+      Plug 'jgdavey/tslime.vim'
+    endif
 
-" html/css plugins
-let plugin_list += [ ['othree/html5.vim', { 'for' : [ 'html', 'css' ] }], ['mattn/emmet-vim', { 'for' : [ 'html', 'css' ] }], ]
+    " clipboard
+    Plug 'cazador481/fakeclip.neovim'
 
-" javascript plugins
-let plugin_list += [ ['pangloss/vim-javascript', { 'for' : 'javascript' }], ['walm/jshint.vim', { 'for' : 'javascript' }], ]
+    " git
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" markdown plugins
-let plugin_list += [ ['tpope/vim-markdown', { 'for' : 'markdown' }], ]
+    " task management
+    Plug 'farseer90718/vim-taskwarrior'
+    Plug 'mtth/scratch.vim'
 
-exec SetPlugs(plugin_list)
+    " running tests
+    Plug 'janko-m/vim-test'
+
+call plug#end()
 
 " autocmds
 augroup PLUG
