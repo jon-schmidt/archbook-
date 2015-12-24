@@ -1,19 +1,9 @@
 " ~/.config/nvim/plugin/better-whitespace.vim
-
-let g:better_whitespace_filetypes_blacklist+=[
-      \ 'md',
-      \ ]
-
-
-" highlighting
-set whitespace_color = synIDattr(hlID('Error'), 'fg')
-
-highlight ExtraWhitespace cterm=whitespace_color
+" plugin: ntpeters/vim-better-whitespace
 
 " autocommands
 augroup WHITESPACE
   autocmd!
+  autocmd ColorScheme * exec 'highlight ExtraWhitespace ctermbg=' . synIDattr(hlID('Error'), 'fg')
   autocmd BufWritePre * StripWhitespace
 augroup END
-  
-

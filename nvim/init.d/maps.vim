@@ -19,16 +19,15 @@ noremap <s-l> $
 
 nnoremap <silent><leader>N :setlocal number!<cr>
 
-inoremap <c-h> <left>
-inoremap <c-j> <down>
-inoremap <c-k> <up>
-inoremap <c-l> <right>
-
 " syntax, highlighting and spelling
 
 " multiple windows
 nnoremap <leader>f <c-w>=
 nnoremap <leader>F <c-w>\|
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " multiple tab pages
 
@@ -48,7 +47,10 @@ nnoremap " viw<esc>a"<esc>hbi"<esc>lel
 nnoremap < viw<esc>a><esc>hbi<<esc>lel
 nnoremap <leader>j <s-j>
 
-"inoremap <tab> <tab>
+inoremap <c-h> <left>
+inoremap <c-j> <down>
+inoremap <c-k> <up>
+inoremap <c-l> <right>
 
 vnoremap ' iw<esc>a'<esc>hbi'<esc>lel
 vnoremap " iw<esc>a"<esc>hbi"<esc>lel

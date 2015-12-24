@@ -6,6 +6,7 @@ endfor
 
 autocmd!
 autocmd BufWritePost init.vim source % | :set filetype=vim
+autocmd FileType help autocmd BufRead,BufEnter noremap <buffer> q :q<cr>
 
 filetype indent plugin on
 syntax on

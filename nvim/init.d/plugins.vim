@@ -21,7 +21,7 @@ call plug#begin('~/.nvim/plugins')
     Plug 'Shougo/deoplete.nvim'
 
   " multiple windows
-  Plug 'easymotion/vim-easymotion', 
+  Plug 'easymotion/vim-easymotion',
 
   " multiple tab pages
 
@@ -42,7 +42,7 @@ call plug#begin('~/.nvim/plugins')
   Plug 'chrisbra/NrrwRgn'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'terryma/vim-multiple-cursors' 
+  Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-surround'
 
     " snippets
@@ -79,11 +79,14 @@ call plug#begin('~/.nvim/plugins')
     Plug 'walm/jshint.vim', { 'for' : 'javascript' }
     Plug 'ternjs/tern_for_vim', { 'for' : 'javascript' }
 
-    " coffeescript 
+    " coffeescript
     Plug 'kchmck/vim-coffee-script', { 'for' : 'coffee' }
 
     " markdown
     Plug 'tpope/vim-markdown', { 'for' : 'markdown' }
+
+    " tmux.conf
+    Plug 'tmux-plugins/vim-tmux'
 
   " multi-byte characters
 
@@ -98,8 +101,10 @@ call plug#begin('~/.nvim/plugins')
 
     " tmux
     if exists('$TMUX_PANE')
+      Plug 'benmills/vimux'
       Plug 'christoomey/vim-tmux-navigator'
-      Plug 'jgdavey/tslime.vim'
+      "Plug 'jgdavey/tslime.vim'
+      Plug 'tmux-plugins/vim-tmux-focus-events'
     endif
 
     " clipboard
@@ -116,6 +121,9 @@ call plug#begin('~/.nvim/plugins')
 
     " running tests
     Plug 'janko-m/vim-test'
+
+    " sessions
+    Plug 'tpope/vim-obsession'
 
 call plug#end()
 

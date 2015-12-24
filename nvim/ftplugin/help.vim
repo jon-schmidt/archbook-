@@ -2,5 +2,5 @@
 
 augroup HELP
   autocmd!
-  autocmd FileType help autocmd BufEnter nnoremap <buffer> q :q<cr>
+  autocmd FileType help autocmd BufRead,BufEnter noremap <buffer> q :q<cr>
 augroup END

@@ -23,16 +23,16 @@
   DISABLE_UNTRACKED_FILES_DIRTY='true'
   HIST_STAMPS='dd/mm/yyyy'
 
-  plugins=(archlinux catimg common-aliases compleat sudo node npm python history web-search git git-extras git-fast composer battery systemd tmux web-search)
+  plugins=(archlinux catimg common-aliases compleat sudo node npm python history web-search git git-extras git-fast composer battery systemd tmux tmuxinator web-search)
 
   source $ZSH/oh-my-zsh.sh
 
   alias zshconf='nvim ~/.zshrc'
 
-# pacman 
-  
+# pacman
+
 # aliases
-# TODO 
+# TODO
 #
 #   bin/utils/trash:
 #     no option:
@@ -48,13 +48,16 @@
 #
 #   apps:
 #     neovim -> open new terminal with neovim with some options?
-#     
+#
 #alias backup=rsync -avzP
 #alias neovim=
 
 # git
- 
+
 # ranger
+
+# tmux
+  source ~/.tmux/tmuxinator.zsh
 
 # nvm
   source $NVM_DIR/nvm.sh
