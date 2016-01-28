@@ -18,18 +18,17 @@ nnoremap <silent><leader>n :silent! NERDTreeToggle<cr>
 function! NERDTreeSetHighlighting()
 
   function! GetColors(group)
-    return {'fg' : synIDattr(hlID(a:group), 'fg', 'cterm'), 'bg' : synIDattr(hlID(a:group), 'fg', 'cterm') }
+    return {'fg' : synIDattr(hlID(a:group), 'fg'), 'bg' : synIDattr(hlID(a:group), 'bg') }
   endfunction
 
   function! HighlightFile(extension, fg, bg)
-    exec 'autocmd filetype nerdtree highlight '. a:extension .' ctermfg='. a:fg .' ctermbg='. a:bg 
+    exec 'autocmd filetype nerdtree highlight '. a:extension .' ctermfg='. a:fg .' ctermbg='. a:bg
     exec 'autocmd filetype nerdtree syn match '. a:extension .' /^\s\+.*'. a:extension .'$/'
     exec 'autocmd filetype nerdtree syn match '. a:extension .' /^\s\+.*'. a:extension .'\*$/'
   endfunction
 
-  let highlight_bg = GetColors('Comment').bg
-  let default = { 'fg' : GetColors('String').fg, 'bg' : highlight_bg }
-  let files = {
+  let s:highlight_bg = GetColors('Folded').bg
+  let s:files = {
         \ 'ignore' : GetColors('Comment').fg,
         \ 'conf' : GetColors('Constant').fg,
         \ 'vim' : GetColors('Type').fg,
@@ -40,13 +39,14 @@ function! NERDTreeSetHighlighting()
         \ 'php' : GetColors('PreProc').fg,
         \ }
 
-    " defaults
-  exec 'autocmd filetype nerdtree highlight any ctermfg=1 ctermbg='. highlight_bg
+  " defaults
+  exec 'autocmd!'
+  exec 'autocmd filetype nerdtree highlight any ctermfg='. GetColors('Folded').fg .' ctermbg='. s:highlight_bg
   exec 'autocmd filetype nerdtree syn match any /^\s\+.*\w$/'
   exec 'autocmd filetype nerdtree syn match any /^\s\+.*\w\*$/'
 
-  for file in items(files)
-    exec HighlightFile(file[0], file[1], highlight_bg)
+  for file in items(s:files)
+    exec HighlightFile(file[0], file[1], s:highlight_bg)
   endfor
 
 endfunction

@@ -51,7 +51,7 @@
 # windows
   set $win_Shift    move container to
 
-  default_orientation         horizontal  
+  default_orientation         horizontal
 	floating_minimum_size       60 x 50
 	floating_maximum_size       1200 x 900
   floating_modifier           $MOD
@@ -73,7 +73,7 @@
   bindsym $MOD+q          kill
   bindsym $MOD+r          border normal 0
   bindsym $MODR+r         border none
-  
+
   bindsym $MOD+h          focus left
   bindsym $MOD+j          focus down
   bindsym $MOD+k          focus up
@@ -103,18 +103,21 @@
 # apps
   set $menu_set_full      -i -name 'main menu'
   set $menu_set_quick     -i -name 'quick menu'
-  set $menu_theme         -x 360 -y 360 -w 560 -h 80 -o 0.8 -dim 0.2 -dc '#050921' -fn 'Lekton Mono-10'  -nf '#D49' -nb '#EEE' -sf '#FFF' -sb '#E67'
+  set $menu_theme_full    -x 360 -y 360 -w 560 -h 80 -o 0.8 -dim 0.2 -dc '#050921' -fn 'Lekton Mono-10'  -nf '#D49' -nb '#EEE' -sf '#FFF' -sb '#E67'
+  set $menu_theme_quick   -x 360 -y 360 -w 560 -h 80 -o 0.8 -dim 0.2 -dc '#050921' -fn 'Lekton Mono-10'  -nf '#94D' -nb '#EEE' -sf '#FFF' -sb '#76E' ) &
   set $term_theme         -b 0 -w 0
 
   set $app_web            google-chrome-stable
   set $app_file           urxvt -e 'ranger'
-  set $app_menu           dmenu_run
+  set $app_menu           $(ls ~/Apps | dmenu
+  set $app_fullmenu       dmenu_run
   set $app_term           urxvt
 
   set $app_chromium       chromium
   set $app_vivaldi        vivaldi
 
-  bindsym $MOD+space      $Exec     $app_menu   $menu_set_quick   $menu_theme
+  bindsym $MOD+space      $Exec     $app_menu       $menu_set_quick   $menu_theme_quick
+  bindsym $MODS+space     $Exec     $app_fullmenu   $menu_set_full    $menu_theme_full
   bindsym $mod+t          $Exec     $app_term
   bindsym $mod+g          $Exec     $app_web
   bindsym $mod+n          $Exec     $app_file

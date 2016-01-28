@@ -5,11 +5,11 @@ source ~/.nvim/plugins/plug.vim
 call plug#begin('~/.nvim/plugins')
 
   " moving around, searching and patterns
-  Plug 'ervandew/supertab'
+  " Plug 'ervandew/supertab' XXX creates issues with tabs
   Plug 'kien/ctrlp.vim'
 
   " tags
-  Plug 'majutsushi/tagbar'
+  " Plug 'majutsushi/tagbar' XXX not using this...
 
   " displaying text
 
@@ -21,7 +21,7 @@ call plug#begin('~/.nvim/plugins')
     Plug 'Shougo/deoplete.nvim'
 
   " multiple windows
-  Plug 'easymotion/vim-easymotion',
+  Plug 'easymotion/vim-easymotion'
 
   " multiple tab pages
 
@@ -75,9 +75,13 @@ call plug#begin('~/.nvim/plugins')
     Plug 'mattn/emmet-vim', { 'for' : [ 'html', 'css' ] }
 
     " javascript
+    Plug 'moll/vim-node', { 'for' : 'javascript' }
     Plug 'pangloss/vim-javascript', { 'for' : 'javascript' }
     Plug 'walm/jshint.vim', { 'for' : 'javascript' }
     Plug 'ternjs/tern_for_vim', { 'for' : 'javascript' }
+
+    " php
+    Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 
     " coffeescript
     Plug 'kchmck/vim-coffee-script', { 'for' : 'coffee' }

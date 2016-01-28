@@ -2,11 +2,12 @@
 
 # environment
   export DEFAULT_USER=$USER
-  export EDITOR='nvim'
+  export EDITOR=nvim
   export LANG=en_CA.UTF-8
   export ZSH=$HOME/.oh-my-zsh
-  export PYTHON='python2'
-  export NVM_DIR=$HOME/.nvm
+  export PYTHON=python2
+  export NVM_DIR=$HOME/.config/nvm
+  export HOSTSALIASES=$HOME/.hosts
 
 # paths
   export PERLPATH=/usr/bin/core_perl:/usr/bin/vendor_perl:/usr/bin/site_perl:
@@ -57,7 +58,6 @@
 # ranger
 
 # tmux
-  source ~/.tmux/tmuxinator.zsh
 
 # nvm
   source $NVM_DIR/nvm.sh

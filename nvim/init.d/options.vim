@@ -95,7 +95,7 @@ set smartindent
 " folding
 set foldlevel=2
 set foldminlines=2
-set foldmethod=indent
+set foldmethod=syntax
 set foldignore=
 
 " diff mode
