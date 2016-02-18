@@ -96,6 +96,9 @@ call plug#begin('~/.nvim/plugins')
 
   " various
 
+    " calendar
+    Plug 'itchyny/calendar.vim'
+
     " file browsing and searching
     Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
     Plug 'junegunn/fzf.vim'
