@@ -24,7 +24,7 @@
   DISABLE_UNTRACKED_FILES_DIRTY='true'
   HIST_STAMPS='dd/mm/yyyy'
 
-  plugins=(archlinux catimg common-aliases compleat sudo node npm python history web-search git git-extras git-fast composer battery systemd tmux tmuxinator web-search)
+  plugins=(archlinux catimg common-aliases compleat sudo node npm python history web-search git git-extras git-fast composer battery systemd tmux tmuxinator web-search docker)
 
   source $ZSH/oh-my-zsh.sh
 
