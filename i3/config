@@ -105,10 +105,10 @@
   set $menu_set_quick     -i -name 'quick menu'
   set $menu_theme_full    -x 360 -y 360 -w 560 -h 80 -o 0.8 -dim 0.2 -dc '#050921' -fn 'Lekton Mono-10'  -nf '#D49' -nb '#EEE' -sf '#FFF' -sb '#E67'
   set $menu_theme_quick   -x 360 -y 360 -w 560 -h 80 -o 0.8 -dim 0.2 -dc '#050921' -fn 'Lekton Mono-10'  -nf '#94D' -nb '#EEE' -sf '#FFF' -sb '#76E' ) &
-  set $term_theme         -b 0 -w 0
+  set $term_theme         -sbg -b 0 -bw 0 +st
 
+  set $app_filebrowser    urxvt -sbg -b 0 -bw 0 -sb -bg White -e 'ranger'
   set $app_web            google-chrome-stable
-  set $app_file           urxvt -e 'ranger'
   set $app_menu           $(ls ~/Apps | dmenu
   set $app_fullmenu       dmenu_run
   set $app_term           urxvt
@@ -116,11 +116,11 @@
   set $app_chromium       chromium
   set $app_vivaldi        vivaldi
 
-  bindsym $MOD+space      $Exec     $app_menu       $menu_set_quick   $menu_theme_quick
-  bindsym $MODS+space     $Exec     $app_fullmenu   $menu_set_full    $menu_theme_full
-  bindsym $mod+t          $Exec     $app_term
+  bindsym $MOD+space      $Exec     $app_menu         $menu_set_quick   $menu_theme_quick
+  bindsym $MODS+space     $Exec     $app_fullmenu     $menu_set_full    $menu_theme_full
+  bindsym $mod+t          $Exec     $app_term         $term_theme
   bindsym $mod+g          $Exec     $app_web
-  bindsym $mod+n          $Exec     $app_file
+  bindsym $mod+n          $Exec     $app_filebrowser
 
 # modes
   set $mode_browser       choose your browser: [space] google chrome stable | [c] google chromium | [v] vivaldi | [esc/enter] cancel

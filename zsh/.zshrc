@@ -10,15 +10,16 @@
   export HOSTSALIASES=$HOME/.hosts
 
 # paths
+  export CURRPATH=./bin
   export PERLPATH=/usr/bin/core_perl:/usr/bin/vendor_perl:/usr/bin/site_perl:
   export RUBYPATH=~/.gem/ruby/2.2.0/bin
   export HOMEPATH=~/bin:~/.bin
   export USRPATH=/usr/local/sbin:/usr/local/bin:/usr/bin:
-  export PATH=$HOMEPATH:$PERLPATH:$RUBYPATH:$USRPATH:$PATH
+  export PATH=$CURRPATH:$USRPATH:$HOMEPATH:$PERLPATH:$RUBYPATH:$PATH
   export MANPATH=/usr/local/man:$MANPATH
 
 # zsh
-  ZSH_THEME='jschmidt'
+  ZSH_THEME='agnoster'
   ENABLE_CORRECTION='true'
   COMPLETION_WAITING_DOTS='true'
   DISABLE_UNTRACKED_FILES_DIRTY='true'
@@ -49,6 +50,8 @@
 #
 #   apps:
 #     neovim -> open new terminal with neovim with some options?
+#
+#   XXX [desktop]
 #
 #alias backup=rsync -avzP
 #alias neovim=

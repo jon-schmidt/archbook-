@@ -42,9 +42,6 @@ nnoremap <c-l> <c-w>l
 " selecting text
 
 " editing text
-"nnoremap ' viw<esc>a'<esc>hbi'<esc>lel XXX wraps around word. not *very* useful
-"nnoremap " viw<esc>a"<esc>hbi"<esc>lel XXX
-"nnoremap < viw<esc>a><esc>hbi<<esc>lel XXX
 nnoremap <leader>j <s-j>
 
 inoremap <c-h> <left>
@@ -56,6 +53,7 @@ inoremap <tab> <tab>
 vnoremap ' iw<esc>a'<esc>hbi'<esc>lel
 vnoremap " iw<esc>a"<esc>hbi"<esc>lel
 vnoremap < iw<esc>a><esc>hbi<<esc>lel
+vnoremap <tab> >><esc>
 
 onoremap ( i(
 onoremap ' i'
