@@ -1,33 +1,37 @@
 community/ack 2.14-1
 community/acpi 1.7-1
-community/ansible 2.0.0.2-2
+community/ansible 2.0.1.0-1
+community/apvlv 0.1.5-2
 community/asciidoc 8.6.9-2
 community/autofs 5.1.1-2
 community/autossh 1.4e-1
+community/blender 17:2.77beta2-1
 community/cbatticon 1.6.3-1
-community/chrony 2.2.1-1
-community/cmus 2.7.1-2
+community/chrony 2.3-1
+community/cmus 2.7.1-8
 community/curlftpfs 0.9.2-6
-community/docker 1:1.10.1-1
-community/elinks 0.13-15
-community/go 2:1.5.3-3
+community/docker 1:1.10.2-2
+community/elinks 0.13-16
+community/go 2:1.6-1
 community/gtkpod 2.1.5-2
 community/i3lock 2.7-1 (i3)
 community/i3status 2.10-1 (i3)
-community/i3-wm 4.11-1 (i3)
+community/i3-wm 4.12-1 (i3)
 community/inotify-tools 3.14-4
 community/libtermkey 0.18-2
 community/libvterm 0.1.git1.c4317a6-2
 community/lua51-messagepack 0.3.4-1
 community/luajit 2.0.4-2
-community/mixxx 2.0.0-2
-community/mongodb 3.2.1-1
-community/msgpack-c 1.4.0-1
-community/npm 3.7.2-1
-community/os-prober 1.70-1
-community/python2-distutils-extra 2.38-3
-community/python2-sphinx 1.3.5-1
-community/python-dateutil 2.4.2-2
+community/mcomix 1.2.1-1
+community/mixxx 2.0.0-4
+community/mongodb 3.2.3-2
+community/msgpack-c 1.4.1-1
+community/nethack 3.6.0-1
+community/npm 3.8.1-1
+community/os-prober 1.71-1
+community/python2-distutils-extra 2.39-1
+community/python2-sphinx 1.3.6-1
+community/python-dateutil 2.5.0-1
 community/python-docutils 0.12-3
 community/python-mock 1.3.0-3
 community/python-rsa 3.3-1
@@ -36,31 +40,31 @@ community/qiv 2.3.1-1
 community/ranger 1.7.2-1
 community/redis 3.0.7-1
 community/redshift 1.11-2
-community/rethinkdb 2.2.4-1
+community/rethinkdb 2.2.5-1
 community/scribus 1.4.6-1
 community/squashfs-tools 4.3-4
-community/sshfs 2.5-1
-community/task 2.5.0-2
+community/sshfs 2.6-1
+community/task 2.5.1-1
 community/tlp 0.8-1
-community/tmux 2.1-1
+community/tmux 2.1-2
 community/transmission-remote-cli 1.7.1-2
 community/ufw 0.34-1
 community/vagrant 1.8.1-1
 community/vifm 0.8.1-1
-community/virtualbox 5.0.14-1
+community/virtualbox 5.0.14-4
 community/volumeicon 0.5.1-1
-community/wireshark-cli 2.0.1-2
+community/wireshark-cli 2.0.2-1
 community/xbindkeys 1.8.6-1
 core/autoconf 2.69-2 (base-devel)
 core/automake 1.15-1 (base-devel)
 core/b43-fwcutter 019-1
 core/bash 4.3.042-4 (base)
-core/binutils 2.25.1-3 (base-devel)
+core/binutils 2.26-3 (base-devel)
 core/bison 3.0.4-1 (base-devel)
 core/bzip2 1.0.6-5 (base)
 core/coreutils 8.25-1 (base)
-core/cryptsetup 1.7.0-1 (base)
-core/device-mapper 2.02.141-1 (base)
+core/cryptsetup 1.7.1-1 (base)
+core/device-mapper 2.02.144-1 (base)
 core/dhcpcd 6.10.1-1 (base)
 core/dialog 1:1.3_20160209-1
 core/diffutils 3.3-2 (base)
@@ -69,41 +73,41 @@ core/efibootmgr 0.12-1
 core/fakeroot 1.20.2-1 (base-devel)
 core/file 5.25-1 (base base-devel)
 core/filesystem 2015.09-1 (base)
-core/findutils 4.4.2-6 (base base-devel)
-core/flex 2.6.0-1 (base-devel)
+core/findutils 4.6.0-1 (base base-devel)
+core/flex 2.6.0-2 (base-devel)
 core/gawk 4.1.3-1 (base base-devel)
-core/gcc 5.3.0-4 (base-devel)
-core/gcc-libs 5.3.0-4 (base)
-core/gettext 0.19.6-2 (base base-devel)
-core/glibc 2.22-3 (base)
-core/grep 2.22-1 (base base-devel)
+core/gcc 5.3.0-5 (base-devel)
+core/gcc-libs 5.3.0-5 (base)
+core/gettext 0.19.7-1 (base base-devel)
+core/glibc 2.23-1 (base)
+core/grep 2.23-1 (base base-devel)
 core/grub 1:2.02.beta2-6
 core/gzip 1.6-1 (base base-devel)
 core/inetutils 1.9.4-2 (base)
 core/iproute2 4.1.1-1 (base)
-core/iputils 20140519.fad11dc-1 (base)
+core/iputils 20150815.1c59920-3 (base)
 core/iw 4.1-1
 core/jfsutils 1.1.15-4 (base)
 core/less 481-2 (base)
 core/licenses 20140629-1 (base)
-core/linux 4.4.1-2 (base)
-core/linux-headers 4.4.1-2
+core/linux 4.4.5-1 (base)
+core/linux-headers 4.4.5-1
 core/logrotate 3.9.1-1 (base)
-core/lvm2 2.02.141-1 (base)
-core/make 4.1-1 (base-devel)
+core/lvm2 2.02.144-1 (base)
+core/make 4.1-3 (base-devel)
 core/man-db 2.7.5-1 (base)
 core/man-pages 4.04-1 (base)
-core/mdadm 3.3.4-1 (base)
-core/nano 2.5.2-1 (base)
+core/mdadm 3.4-1 (base)
+core/nano 2.5.3-1 (base)
 core/netctl 1.11-1 (base)
 core/net-tools 1.60.20130531git-1
 core/nfs-utils 1.3.3-3
-core/openssh 7.1p2-1
-core/pacman 5.0.0-1 (base base-devel)
+core/openssh 7.2p2-1
+core/pacman 5.0.1-2 (base base-devel)
 core/patch 2.7.5-1 (base-devel)
-core/pciutils 3.4.0-1 (base)
+core/pciutils 3.4.1-1 (base)
 core/pcmciautils 018-7 (base)
-core/perl 5.22.1-1 (base)
+core/perl 5.22.1-2 (base)
 core/pkg-config 0.29-1 (base-devel)
 core/procps-ng 3.3.11-2 (base)
 core/psmisc 22.21-3 (base)
@@ -111,103 +115,118 @@ core/reiserfsprogs 3.6.24-1 (base)
 core/rfkill 0.5-1
 core/sed 4.2.2-3 (base base-devel)
 core/shadow 4.2.1-3 (base)
-core/s-nail 14.8.6-1 (base)
+core/s-nail 14.8.6-2 (base)
 core/sudo 1.8.15-1 (base-devel)
 core/sysfsutils 2.1.0-9 (base)
-core/systemd-sysvcompat 228-4 (base)
+core/systemd-sysvcompat 229-3 (base)
 core/tar 1.28-1 (base)
-core/texinfo 6.0-1 (base base-devel)
+core/texinfo 6.1-1 (base base-devel)
 core/usbutils 008-1 (base)
 core/util-linux 2.27.1-1 (base base-devel)
 core/vi 1:070224-2 (base)
 core/which 2.21-1 (base base-devel)
-core/wpa_supplicant 1:2.5-2
+core/wpa_supplicant 1:2.5-3
 core/xfsprogs 4.3.0-1 (base)
 extra/alsa-lib 1.1.0-1
 extra/alsa-utils 1.1.0-1
-extra/apache 2.4.18-1
+extra/apache 2.4.18-2
 extra/audiofile 0.3.6-3
 extra/bdf-unifont 7.0.06-2
+extra/bind-tools 9.10.3.P4-1
 extra/bluez 5.37-2
 extra/bluez-utils 5.37-2
-extra/cantarell-fonts 0.0.21-1
+extra/boost 1.60.0-2
+extra/calligra-krita 2.9.11-2 (calligra)
+extra/cantarell-fonts 1:0.0.24-1
 extra/cheese 3.18.1-1 (gnome-extra)
-extra/chromium 48.0.2564.103-1
+extra/chromium 49.0.2623.87-1
 extra/cmake 3.4.3-1
 extra/colord 1.2.12-1
 extra/cpio 2.12-2
 extra/ctags 5.8-5
 extra/dhcp 4.3.3.p1-1
 extra/dotconf 1.3-4
+extra/eigen 3.2.8-2
 extra/evince 3.18.2-2 (gnome)
+extra/exiv2 0.25-3
+extra/extra-cmake-modules 5.19.0-1
 extra/fontconfig 2.11.1-2
 extra/gconf 3.2.6-3
 extra/geoclue 0.12.99-2
-extra/git 2.7.1-1
+extra/gimp 2.8.16-1
+extra/git 2.7.2-2
 extra/gperf 3.0.4-6
 extra/gpsd 3.16-2
-extra/gvfs-afc 1.26.2-1 (gnome)
+extra/gsl 2.1-1
+extra/gvfs-afc 1.26.3-1 (gnome)
 extra/help2man 1.46.4-1
-extra/htop 2.0.0-1
-extra/imagemagick 6.9.3.0-1
+extra/htop 2.0.0-2
+extra/imagemagick 6.9.3.7-1
+extra/inkscape 0.91-16
 extra/intltool 0.51.0-1
 extra/js 24.2.0-3
+extra/kio 5.19.0-1 (kf5)
+extra/kitemmodels 5.19.0-1 (kf5)
 extra/libconfig 1.5-2
+extra/libraw 0.17.1-1
 extra/libusb-compat 0.1.5-1
 extra/lirc 1:0.9.3.a-2
 extra/lm_sensors 3.4.0-1
 extra/lua51-lpeg 1.0.0-1
-extra/mariadb 10.1.11-1
-extra/mpd 0.19.12-1
-extra/nginx 1.8.1-1
+extra/mariadb 10.1.12-3
+extra/mpd 0.19.13-2
+extra/nginx 1.8.1-3
 extra/noto-fonts-cjk 1.004-2
 extra/noto-fonts-emoji 20151224-1
-extra/nvidia-340xx 340.96-5
+extra/nvidia-340xx 340.96-8
 extra/nvidia-340xx-libgl 340.96-1
+extra/p7zip 9.38.1-4
 extra/parted 3.2-3
 extra/pavucontrol 3.0-4
 extra/perl-capture-tiny 0.30-1
-extra/php 7.0.3-1
-extra/php-apache 7.0.3-1
-extra/php-composer 1.0.0.alpha11-3
-extra/php-gd 7.0.3-1
-extra/php-tidy 7.0.3-1
-extra/pulseaudio 8.0-1
-extra/pulseaudio-bluetooth 8.0-1
-extra/python2-dbus 1.2.0-5
+extra/php 7.0.4-2
+extra/php-apache 7.0.4-2
+extra/php-composer 1.0.0.beta1-1
+extra/php-gd 7.0.4-2
+extra/php-tidy 7.0.4-2
+extra/poppler-qt5 0.41.0-1
+extra/pulseaudio 8.0-3
+extra/pulseaudio-bluetooth 8.0-3
+extra/python2-dbus 1.2.2-1
 extra/python2-gobject2 2.28.6-12
-extra/python2-pip 8.0.2-1
+extra/python2-pip 8.1.0-1
 extra/python2-xdg 0.25-3
 extra/python-gobject 3.18.2-1
 extra/python-nose 1.3.7-2
-extra/python-pip 8.0.2-1
+extra/python-pip 8.1.0-1
 extra/rsync 3.1.2-1
 extra/smartmontools 6.4-2
-extra/spamassassin 3.4.1-2
+extra/spamassassin 3.4.1-3
 extra/subversion 1.9.3-2
-extra/transmission-cli 2.84-2
-extra/transmission-gtk 2.84-2
-extra/udisks2 2.1.6-1
+extra/transmission-cli 2.91-1
+extra/transmission-gtk 2.91-1
+extra/udisks2 2.1.7-1
 extra/unzip 6.0-11
 extra/usbmuxd 1.1.0-2
-extra/vlc 2.2.1-13
-extra/wget 1.16.3-1
-extra/xclip 0.12-4
+extra/vc 0.7.5-2
+extra/vlc 2.2.2-3
+extra/wget 1.16.3-2
+extra/xclip 0.12.git.20160201-1
 extra/xf86-input-evdev 2.10.1-3 (xorg-drivers xorg)
 extra/xf86-input-joystick 1.6.2-6 (xorg-drivers xorg)
 extra/xf86-input-keyboard 1.8.1-2 (xorg-drivers xorg)
-extra/xf86-input-libinput 0.16.0-1 (xorg-drivers xorg)
+extra/xf86-input-libinput 0.17.0-1 (xorg-drivers xorg)
 extra/xf86-input-mouse 1.9.1-2 (xorg-drivers xorg)
 extra/xf86-input-vmmouse 13.1.0-2 (xorg-drivers xorg)
 extra/xf86-input-void 1.4.1-2 (xorg-drivers xorg)
-extra/xf86-video-amdgpu 1.0.0-1 (xorg-drivers xorg)
+extra/xf86-video-amdgpu 1.0.1-1 (xorg-drivers xorg)
 extra/xf86-video-ark 0.7.5-7 (xorg-drivers xorg)
 extra/xf86-video-ati 1:7.6.1-1 (xorg-drivers xorg)
 extra/xf86-video-dummy 0.3.7-5 (xorg-drivers xorg)
 extra/xf86-video-fbdev 0.4.4-5 (xorg-drivers xorg)
 extra/xf86-video-glint 1.2.8-7 (xorg-drivers xorg)
 extra/xf86-video-i128 1.3.6-7 (xorg-drivers xorg)
-extra/xf86-video-intel 1:2.99.917+519+g8229390-1 (xorg-drivers xorg)
+extra/xf86-video-intel 1:2.99.917+560+gd167280-1 (xorg-drivers xorg)
 extra/xf86-video-mach64 6.9.5-2 (xorg-drivers xorg)
 extra/xf86-video-neomagic 1.2.9-2 (xorg-drivers xorg)
 extra/xf86-video-nv 2.1.20-7 (xorg-drivers xorg)
@@ -261,7 +280,7 @@ extra/xorg-xlsclients 1.1.3-1 (xorg-apps xorg)
 extra/xorg-xmodmap 1.0.9-1 (xorg-apps xorg)
 extra/xorg-xpr 1.0.4-2 (xorg-apps xorg)
 extra/xorg-xprop 1.2.2-1 (xorg-apps xorg)
-extra/xorg-xrandr 1.4.3-1 (xorg-apps xorg)
+extra/xorg-xrandr 1.5.0-1 (xorg-apps xorg)
 extra/xorg-xrdb 1.1.0-2 (xorg-apps xorg)
 extra/xorg-xrefresh 1.0.5-1 (xorg-apps xorg)
 extra/xorg-xsetroot 1.1.1-2 (xorg-apps xorg)
@@ -269,7 +288,7 @@ extra/xorg-xvinfo 1.1.3-1 (xorg-apps xorg)
 extra/xorg-xwd 1.0.6-1 (xorg-apps xorg)
 extra/xorg-xwininfo 1.1.3-1 (xorg-apps xorg)
 extra/xorg-xwud 1.0.4-2 (xorg-apps xorg)
-extra/xterm 322-1
+extra/xterm 323-1
 extra/zip 3.0-7
 extra/zsh 5.2-1
 local/acbuild 0.1.1-1
@@ -285,10 +304,12 @@ local/jsawk-git 1.4.13.g5a14c4a-1
 local/libcurl-compat 7.46.0-2
 local/lightum-git 2.3.1-1
 local/makefontpkg 20150624-1
+local/natron-bin 2.0.0-1
 local/neovim-git 0.1.1.r360.gd459a08-1
 local/nerd-fonts-git r153.273a285-1
-local/nvidia-bl 0.17.3-8
+local/nvidia-bl 0.17.3-9
 local/package-query 1.7-2
+local/packer-io 0.8.6-2
 local/pommed-light 1.50lw-1
 local/powerline-fonts-git r98.6ac4c01-1
 local/python2-pyephem 3.7.5.3-1
@@ -308,5 +329,5 @@ local/urlview 0.9-11
 local/urxvt-resize-font-git 7.b53f2f6-1
 local/urxvt-tabbedex 0.4-3
 local/vivaldi 1.0.344.37-1
-local/xf86-input-mtrack-git 0.4.0.r2.g04c222e-1
+local/xf86-input-mtrack-git 0.4.0.r7.g21ae21f-1
 local/yaourt 1.7-1

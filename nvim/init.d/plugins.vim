@@ -1,5 +1,5 @@
 " ~/.config/nvim/init.d/plugins.vim
-
+syntax on
 source ~/.nvim/plugins/plug.vim
 
 call plug#begin('~/.nvim/plugins')
@@ -62,6 +62,7 @@ call plug#begin('~/.nvim/plugins')
   " the swap file
 
   " command line editing
+    Plug 'dhruvasagar/vim-table-mode'
 
   " executing external commands
 
@@ -78,7 +79,7 @@ call plug#begin('~/.nvim/plugins')
     Plug 'moll/vim-node', { 'for' : 'javascript' }
     Plug 'pangloss/vim-javascript', { 'for' : 'javascript' }
     Plug 'walm/jshint.vim', { 'for' : 'javascript' }
-    Plug 'ternjs/tern_for_vim', { 'for' : 'javascript' }
+    "Plug 'ternjs/tern_for_vim', { 'for' : 'javascript' }
 
     " php
     Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
@@ -130,6 +131,7 @@ call plug#begin('~/.nvim/plugins')
     Plug 'janko-m/vim-test'
 
     " sessions
+    Plug 'mhinz/vim-startify'
     Plug 'tpope/vim-obsession'
 
 call plug#end()

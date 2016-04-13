@@ -1,7 +1,10 @@
 " ~/.config/nvim/ftplugin/javascript.vim
 
+syntax on
+
 let javascript_enable_domhtmlcss=1
 
-autocmd BufRead,BufWritePost FileType javascript JSHint
+iabbrev <buffer> Promise( Promise((resolve, reject) => {
 
-syntax on
+autocmd BufRead,BufWritePost FileType javascript :JSHint %
+
