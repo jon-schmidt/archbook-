@@ -8,6 +8,8 @@
   export PYTHON=python2
   export NVM_DIR=$HOME/.config/nvm
   export HOSTSALIASES=$HOME/.hosts
+  export NODE_PORT=8080
+  export NODE_ENV=DEV
 
 # paths
   export CURRPATH=./bin
