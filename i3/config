@@ -84,10 +84,10 @@
   bindsym $MODS+s         layout stacking
   bindsym $MODS+t         layout tabbed
 
-  bindsym $MODS+h         move left 20px
-  bindsym $MODS+j         move down 20px
-  bindsym $MODS+k         move up 20px
-  bindsym $MODS+l         move right 20px
+  bindsym $MODS+h         move left 40px
+  bindsym $MODS+j         move down 40px
+  bindsym $MODS+k         move up 40px
+  bindsym $MODS+l         move right 40px
 
   bindsym $MODS+1         $win_Shift $ws_1
   bindsym $MODS+2         $win_Shift $ws_2

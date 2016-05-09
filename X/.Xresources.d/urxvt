@@ -35,7 +35,7 @@
   URxvt*scrollstyle: plain
   URxvt*scrollcolor: #aabbcc
   URxvt*skipscroll: on
-  URxvt*thickness: 6    
+  URxvt*thickness: 6
   URxvt*visualbell: on
   URxvt*cursorblink: on
   URxvt*savelines: 500
